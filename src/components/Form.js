@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css'
+import shuffleIcon from '../assets/shuffle.svg'
+
 const Form = () => {
 
     const [captchaString, setCaptchaString] = useState('')
@@ -20,7 +22,10 @@ const Form = () => {
         generateCaptcha();
     }, [])
 
-
+    const updateCaptcha = (e) => {
+        e.preventDefault();
+        generateCaptcha()
+    }
 
 
 
@@ -44,6 +49,13 @@ const Form = () => {
                     <div className=" captcha">
                         {captchaString}
                     </div>
+
+                    <button
+                        className="shuffle-icon"
+                        onClick={(e) => updateCaptcha(e)}
+                    >
+                        <img src={shuffleIcon} alt="generate captcha" />
+                    </button>
 
                     <input
                         placeholder="type the text here"
