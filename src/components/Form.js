@@ -1,6 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css'
 const Form = () => {
+
+    const [captchaString, setCaptchaString] = useState('')
+
+
+    const generateCaptcha = () => {
+        let keywords = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+        let captcha = "";
+        for (let i = 0; i < 6; i++) {
+
+            captcha = captcha + keywords.charAt(Math.random() * keywords.length)
+        }
+        setCaptchaString(captcha)
+
+    }
+
+    useEffect(() => {
+        generateCaptcha();
+    }, [])
+
+
+
+
+
     return (
         <div className="container">
 
@@ -19,15 +42,15 @@ const Form = () => {
 
                 <div className="captcha-container">
                     <div className=" captcha">
-                        1ghtsf
-                </div>
+                        {captchaString}
+                    </div>
 
                     <input
                         placeholder="type the text here"
                         className="captcha-input" />
                 </div>
 
-               
+
 
                 <button
                     className="submit-button"
