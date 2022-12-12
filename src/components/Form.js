@@ -11,11 +11,23 @@ const Form = () => {
                     placeholder="Name"
                     className="text-input"
                 />
-                
+
                 <input
                     placeholder="Email"
                     className="text-input"
                 />
+
+                <div className="captcha-container">
+                    <div className=" captcha">
+                        1ghtsf
+                </div>
+
+                    <input
+                        placeholder="type the text here"
+                        className="captcha-input" />
+                </div>
+
+               
 
                 <button
                     className="submit-button"

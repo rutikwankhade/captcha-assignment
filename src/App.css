@@ -1,9 +1,8 @@
-.container{
-  display:flex;
+.container {
+  display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
-
 }
 
 .form {
@@ -13,16 +12,46 @@
   padding: 40px;
   display: flex;
   flex-direction: column;
-  margin:20px;
+  margin: 20px;
 }
 
 .text-input {
   padding: 8px;
   margin: 4px;
   border: none;
-  background-color: #f2f2f2;
+  border: solid 1px #f2f2f2;
   font-size: 18px;
   border-radius: 5px;
+}
+
+.captcha-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0px 10px 4px;
+}
+
+.captcha {
+  background-color: #f2f2f2;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-decoration: line-through;
+}
+
+.captcha-input {
+  width: 200px;
+  border: solid 1px #f2f2f2;
+  margin: 4px;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 18px;
 }
 
 .submit-button {
@@ -34,4 +63,5 @@
   font-weight: 600;
   padding: 8px;
   margin-top: 10px;
+  margin: 4px;
 }
